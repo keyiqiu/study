@@ -6,6 +6,7 @@
       <h1 class="post-title">
         10 Advanced CSS Techniques Every Developer Should Know in 2024
       </h1>
+      <a href="https://news.wmpvp.com/community-detail.html?id=360686733"></a>
       <div class="post-meta">
         <address class="author">
           By <a rel="author" href="#">Jane Doe</a>
