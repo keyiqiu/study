@@ -1,0 +1,55 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "123456",
+      "token": "admin-token-123456",
+      "info": {
+        "name": "管理员",
+        "role": "admin",
+        "id": 1
+      }
+    },
+    {
+      "id": "2",
+      "username": "user",
+      "password": "123456",
+      "token": "user-token-123456",
+      "info": {
+        "name": "普通用户",
+        "role": "user",
+        "id": 2
+      }
+    },
+    {
+      "id": "7ba1"
+    },
+    {
+      "id": "7b15"
+    },
+    {
+      "id": "eed2"
+    },
+    {
+      "id": "e903",
+      "username": "admin",
+      "password": "123456"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -3,10 +3,13 @@
   <article class="blog-post">
     <!-- 文章头部 -->
     <header class="post-header">
-      <h1 class="post-title">
+      <!-- <h1 class="post-title">
         10 Advanced CSS Techniques Every Developer Should Know in 2024
-      </h1>
-      <a href="https://news.wmpvp.com/community-detail.html?id=360686733"></a>
+      </h1> -->
+      <a href="https://news.wmpvp.com/community-detail.html?id=360686733">
+        点击欣赏五杀
+      </a>
+      <button @click="haha">haha</button>
       <div class="post-meta">
         <address class="author">
           By <a rel="author" href="#">Jane Doe</a>
@@ -86,7 +89,37 @@
 </template>
 
 <script setup lang="ts">
-// 暂时不需要脚本
+import axios from "axios";
+
+// config就是配置对象
+axios.interceptors.request.use((config) => {
+  console.log("我是一个请求拦截器");
+  // 可以在这里修改config中的参数
+  config.params = { a: 100 };
+
+  return Promise.resolve(config);
+});
+
+axios.interceptors.response.use((config) => {
+  console.log("我是一个响应拦截器");
+  console.log(config);
+  return config.data;
+});
+
+const hahaAxios = axios.create({
+  baseURL: "http://localhost:3000",
+});
+
+const haha = async () => {
+  try {
+    const res = await hahaAxios.get("/posts/1");
+    console.log("我成功请求了数据");
+    console.log(res);
+    console.log(res.data);
+  } catch (err) {
+    console.log("我请求数据失败了");
+  }
+};
 </script>
 
 <style scoped>

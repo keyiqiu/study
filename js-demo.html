@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <title>原生JS练习</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 2rem;
+      }
+      #result {
+        margin-top: 1rem;
+        color: #1976d2;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>原生JS练习</h2>
+    <input id="input" placeholder="输入内容" />
+    <button onclick="showResult()">显示结果</button>
+    <div id="result"></div>
+    <script>
+      function showResult() {
+        var val = document.getElementById("input").value;
+        document.getElementById("result").innerText = "你输入的是：" + val;
+      }
+    </script>
+  </body>
+</html>
